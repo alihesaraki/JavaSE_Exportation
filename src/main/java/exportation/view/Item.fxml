@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1087.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="exportation.controller.ItemController">
+   <children>
+      <GridPane layoutX="26.0" layoutY="26.0" prefHeight="535.0" prefWidth="261.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="138.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="123.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Id" />
+            <Label text="Name" GridPane.rowIndex="1" />
+            <Label text="HS-Code" GridPane.rowIndex="2" />
+            <Label text="Brand" GridPane.rowIndex="3" />
+            <Label text="Model" GridPane.rowIndex="4" />
+            <Label text="Dimension Of Unit" GridPane.rowIndex="5" />
+            <Label text="Dimension Of Pallet" GridPane.rowIndex="6" />
+            <Label text="Weight Of Unit" GridPane.rowIndex="7" />
+            <Label text="Weight Of Pallet" GridPane.rowIndex="8" />
+            <Label text="Pallet Capacity" GridPane.rowIndex="9" />
+            <Label text="Cost" GridPane.rowIndex="10" />
+            <TextField fx:id="idTxt" prefHeight="35.0" GridPane.columnIndex="1" />
+            <TextField fx:id="nameTxt" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="hsTxt" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="modelTxt" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="dOfUnitTxt" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="dOfPalletTxt" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="wOfUnitTxt" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="wOfPalletTxt" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="pCapacityTxt" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="costTxt" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <ComboBox fx:id="brandCombo" prefHeight="35.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="itemTbl" layoutX="306.0" layoutY="79.0" prefHeight="568.0" prefWidth="767.0">
+        <columns>
+          <TableColumn fx:id="idCln" prefWidth="44.0" text="Id" />
+          <TableColumn fx:id="nameCln" prefWidth="69.0" text="Name" />
+            <TableColumn fx:id="hsCln" prefWidth="72.0" text="HS-Code" />
+            <TableColumn fx:id="brandCln" prefWidth="71.0" text="Brand" />
+            <TableColumn fx:id="modelCln" prefWidth="75.0" text="Model" />
+            <TableColumn fx:id="dOfUnitCln" prefWidth="73.0" text="D-Unit" />
+            <TableColumn fx:id="dOfPalletCln" prefWidth="78.0" text="D-Pallet" />
+            <TableColumn fx:id="wOfUnitCln" prefWidth="68.0" text="W-Unit" />
+            <TableColumn fx:id="wOfPalletCln" prefWidth="73.0" text="W-Pallet" />
+            <TableColumn fx:id="pCapacityCln" prefWidth="73.0" text="Pallet-C" />
+            <TableColumn fx:id="costCln" prefWidth="73.0" text="Cost" />
+        </columns>
+      </TableView>
+      <HBox layoutX="303.0" layoutY="14.0" prefHeight="65.0" prefWidth="222.0">
+         <children>
+            <Label text="Find By Id">
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="fByIdTxt" prefHeight="31.0" prefWidth="127.0">
+               <HBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="564.0" layoutY="14.0" prefHeight="65.0" prefWidth="296.0">
+         <children>
+            <Label text="Find By Model">
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="fByModelTxt" prefHeight="31.0" prefWidth="191.0">
+               <HBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Button fx:id="findAllBtn" layoutX="951.0" layoutY="35.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="109.0" text="Find All" />
+      <HBox layoutX="26.0" layoutY="561.0" prefHeight="86.0" prefWidth="261.0">
+         <children>
+            <Button fx:id="saveBtn" mnemonicParsing="false" prefWidth="74.0" text="Save">
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="editBtn" mnemonicParsing="false" prefWidth="74.0" text="Edit">
+               <HBox.margin>
+                  <Insets left="20.0" top="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="removeBtn" mnemonicParsing="false" text="Remove">
+               <HBox.margin>
+                  <Insets left="20.0" top="25.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</Pane>

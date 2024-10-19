@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1126.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="exportation.controller.PersonController">
+   <children>
+   
+       <GridPane layoutX="21.0" layoutY="23.0" prefHeight="576.0" prefWidth="311.0">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="94.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="171.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+      <children>
+              <Label text="Id" />
+              <Label text="Name " GridPane.rowIndex="1" />
+              <Label text="Family" GridPane.rowIndex="2" />
+              <Label text="Gender" GridPane.rowIndex="3" />
+              <Label text="National Id" GridPane.rowIndex="4" />
+              <Label text="Email" GridPane.rowIndex="5" />
+              <Label text="Phone" GridPane.rowIndex="6" />
+              <Label text="Position" GridPane.rowIndex="7" />
+              <Label text="Address" GridPane.rowIndex="8" />
+              <TextField fx:id="idTxt" prefHeight="35.0" text="2" GridPane.columnIndex="1" />
+              <TextField fx:id="nameTxt" prefHeight="35.0" text="errrrxz" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+              <TextField fx:id="familyTxt" prefHeight="35.0" text="reub5eu" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              <HBox prefHeight="0.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                 <children>
+                     <RadioButton fx:id="maleRbtn" mnemonicParsing="false" selected="true" text="Male">
+                         <HBox.margin>
+                             <Insets top="16.0" />
+                         </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderToggle" />
+                     </toggleGroup>
+                     </RadioButton>
+                     <RadioButton fx:id="femaleRbtn" mnemonicParsing="false" text="Female" toggleGroup="$genderToggle">
+                         <HBox.margin>
+                             <Insets left="40.0" top="16.0" />
+                         </HBox.margin>
+                     </RadioButton>
+                 </children>
+              </HBox>
+              <TextField fx:id="nationalidTxt" prefHeight="35.0" text="1234567895" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+              <TextField fx:id="emailTxt" prefHeight="35.0" text="zahra@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+              <TextField fx:id="phoneTxt" prefHeight="35.0" text="09365236292" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+              <TextField fx:id="positionTxt" prefHeight="35.0" text="vhrtjrj" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+              <TextArea fx:id="addressTxtarea" prefHeight="200.0" prefWidth="200.0" text="rtj tyekjutekt" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      </children>
+       </GridPane>
+   
+       <HBox layoutX="21.0" layoutY="606.0" prefHeight="47.0" prefWidth="311.0">
+      <children>
+              <Button fx:id="saveBtn" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Save">
+                  <HBox.margin>
+                      <Insets top="20.0" />
+                  </HBox.margin>
+              </Button>
+              <Button fx:id="editBtn" mnemonicParsing="false" prefWidth="74.0" text="Edit">
+                  <HBox.margin>
+                      <Insets left="44.5" top="20.0" />
+                  </HBox.margin>
+              </Button>
+              <Button fx:id="removeBtn" mnemonicParsing="false" text="Remove">
+                  <HBox.margin>
+                      <Insets left="41.0" top="20.0" />
+                  </HBox.margin>
+              </Button>
+      </children>
+       </HBox>
+   
+       <TableView fx:id="personTbl" layoutX="352.0" layoutY="87.0" prefHeight="576.0" prefWidth="764.0">
+           <columns>
+               <TableColumn fx:id="idCln" prefWidth="60.0" text="Id" />
+               <TableColumn fx:id="nameCln" prefWidth="72.79998779296875" text="Name" />
+               <TableColumn fx:id="familyCln" prefWidth="83.0" text="Family" />
+               <TableColumn fx:id="genderCln" prefWidth="83.0" text="Gender" />
+               <TableColumn fx:id="nationalCln" prefWidth="83.0" text="National Id" />
+               <TableColumn fx:id="emailCln" prefWidth="83.0" text="Email" />
+               <TableColumn fx:id="phoneCln" prefWidth="83.0" text="Phone" />
+               <TableColumn fx:id="positionCln" prefWidth="76.0" text="Position" />
+               <TableColumn fx:id="addressCln" prefWidth="140.800048828125" text="Address" />
+           </columns>
+       </TableView>
+   
+       <HBox layoutX="359.0" prefHeight="87.0" prefWidth="266.0">
+      <children>
+              <Label text="Find By Id">
+                  <HBox.margin>
+                      <Insets top="40.0" />
+                  </HBox.margin>
+              </Label>
+              <TextField fx:id="findbyidTxt" prefHeight="35.0">
+                  <HBox.margin>
+                      <Insets left="10.0" top="35.0" />
+                  </HBox.margin>
+              </TextField>
+      </children>
+       </HBox>
+   
+       <HBox layoutX="661.0" prefHeight="87.0" prefWidth="311.0">
+      <children>
+              <Label text="Find By Family">
+                  <HBox.margin>
+                      <Insets top="40.0" />
+                  </HBox.margin>
+              </Label>
+              <TextField fx:id="findbyfamilyTxt" prefHeight="35.0">
+                  <HBox.margin>
+                      <Insets left="10.0" top="35.0" />
+                  </HBox.margin>
+              </TextField>
+      </children>
+       </HBox>
+   
+       <Button fx:id="findallBtn" layoutX="993.0" layoutY="36.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" text="Find All" />
+   </children>
+
+</Pane>
